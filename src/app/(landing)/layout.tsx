@@ -1,6 +1,5 @@
-import { Header } from "./_components/header";
-import { Footer } from "./_components/footer";
-
+import { Header } from "@/components/section/Header";
+import { Footer } from "@/components/section/Footer";
 
 export default function RootLayout({
   children,
@@ -8,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="min-h-screen overflow-hidden scroll-smooth flex flex-col justify-between">
+    <div className="background bg-repeat-y bg-contain">
       <Header />
       {children}
       <Footer />

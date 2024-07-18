@@ -1,29 +1,16 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --text: #050315;
-    --background: #f2f2f2;
-    --primary: #b9ff66;
-    --secondary: #B9FF77;
-    --accent: #dcffdc;
+    --background: #f7f7f7;
+    --background2: #f1f1f1;
+    --text: #1E1E1E;
+    --text2: #787878;
+    --primary: #44F478;
+    --secondary: #A1F9BB;
   }
-
-  .dark {
-    --text: #ebe9fc;
-    --background: #010104;
-    --primary: #0f9900;
-    --secondary: #002400;
-    --accent: #549900;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--text);
 }
 
 .h-full {
@@ -34,7 +21,11 @@ body {
   height: 100dvh
 }
 
+.background {
+  background-image: url(/bg.svg)
+}
+
 ::-moz-selection,
 ::selection {
-  background-color: var(--secondary);
+  background: var(--secondary);
 }

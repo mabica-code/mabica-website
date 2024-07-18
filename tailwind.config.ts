@@ -9,11 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        text: 'var(--text)',
-        background: 'var(--background)',
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        accent: 'var(--accent)',
+        text: "var(--text)",
+        text2: "var(--text2)",
+        background: "var(--background)",
+        background2: "var(--background2)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
       },
 
       animation: {
