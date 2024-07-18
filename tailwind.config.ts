@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin'
 
 const config: Config = {
   content: [
@@ -17,10 +18,30 @@ const config: Config = {
         secondary: "var(--secondary)",
       },
 
+      textShadow: {
+        sm: '0 1px 2px var(--background2)',
+        DEFAULT: '0 2px 4px var(--background2)',
+        lg: '0 8px 16px var(--background2)',
+      },
+
       animation: {
         "spin-slow": "spin 10s linear infinite",
       },
     },
   },
+  plugins: [
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 };
+
+
 export default config;

@@ -6,7 +6,7 @@ type props = {
 
 export function SectionLayout({children, className, paddingY = "py-10"}: props) {
   return (
-    <section className={`${className} max-w-screen-2xl relative mx-auto px-[7%] ${paddingY}`} >
+    <section className={`${className} max-w-screen-md  mx-auto px-[7%] ${paddingY}`} >
       {children}
     </section >
   )
