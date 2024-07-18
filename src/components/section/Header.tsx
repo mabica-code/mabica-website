@@ -21,7 +21,7 @@ export function Header() {
           </div>
 
           <div className="flex gap-2">
-            <button className={`${nav ? "block" : "hidden"} rounded-full bg-text text-background p-1`} onClick={() => setDark(!dark)}>
+            <button className={`${nav ? "block" : "hidden"} md:block rounded-full bg-text text-background p-2`} onClick={() => setDark(!dark)}>
               {dark ? (
                 <FaSun />
               ) : (
@@ -29,13 +29,16 @@ export function Header() {
               )}
             </button>
 
-            <button onClick={() => setNav(!nav)}>
+            <button onClick={() => setNav(!nav)} className="md:hidden">
               {nav ? (
                 <FaTimes />
               ) : (
                 <FaAlignRight />
               )}
             </button>
+
+
+            <button className="shadow w-full hover:shadow-md duration-300 bg-primary rounded-full px-4 py-1 font-medium">Start Our Story</button>
           </div>
         </header>
 
